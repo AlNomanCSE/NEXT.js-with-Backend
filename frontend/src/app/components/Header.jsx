@@ -1,13 +1,15 @@
 import React from "react";
-
+import styles from "./Header.module.css";
+import Link from "next/link";
 const Header = () => {
   return (
-    <header>
-      <div>
-        <p>MERN Project</p>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <Link href="/">MERN Project</Link>
       </div>
-      <nav>
-        
+      <nav className={styles.navigation}>
+        <Link href="/createinfo">Create</Link>
+        <Link href="/updateinfo">Update</Link>
       </nav>
     </header>
   );
