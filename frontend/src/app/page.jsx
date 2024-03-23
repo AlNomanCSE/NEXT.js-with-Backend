@@ -1,8 +1,8 @@
 "use client";
-
 import React, { useState } from "react";
-
+import { useRouter } from "next/navigation";
 const page = () => {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState(0);
@@ -26,7 +26,7 @@ const page = () => {
       setEmail("");
       setName("");
       setError("");
-      console.log(result);
+      router.push("/allpost");
     }
   }
   return (
